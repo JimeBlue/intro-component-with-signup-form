@@ -42,9 +42,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
   padding: 80px 0 40px 0;
 }
+
+/* TODO: add height: 100vh to .intro in desktop */
 
 .container {
   width: 80%;
