@@ -29,11 +29,33 @@
             <span> $20/mo. thereafter</span>
           </div>
 
-          <form action="">
-            <input type="text" id="first-name" />
-            <input type="text" id="last-name" placeholder="Last Name" />
-            <input type="email" id="email" placeholder="Email Adress" />
-            <input type="password" id="password" placeholder="Password" />
+          <form action="" class="form">
+            <ul class="form__list">
+              <li class="form__item">
+                <input type="text" id="first-name" placeholder="First Name" />
+                <span class="form__error-message"
+                  >First Name cannot be empty</span
+                >
+              </li>
+              <li class="form__item">
+                <input type="text" id="last-name" placeholder="Last Name" />
+                <span class="form__error-message"
+                  >Last Name cannot be empty</span
+                >
+              </li>
+              <li class="form__item">
+                <input type="email" id="email" placeholder="Email Adress" />
+                <span class="form__error-message"
+                  >Looks like this is not an email</span
+                >
+              </li>
+              <li class="form__item">
+                <input type="password" id="password" placeholder="Password" />
+                <span class="form__error-message"
+                  >Password cannot be empty</span
+                >
+              </li>
+            </ul>
             <button type="submit">Claim your free trial</button>
             <small
               >By clicking the button, you are agreeing to

@@ -85,3 +85,14 @@ body {
   align-items: center;
   box-shadow: 0rem 0.5rem 0px 1px rgb(0 0 0 / 21%);
 }
+
+/* Form */
+
+.form {
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  color: var(--dark-blue);
+}
