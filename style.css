@@ -164,3 +164,8 @@ body {
   font-weight: 550;
   letter-spacing: 1px;
 }
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
