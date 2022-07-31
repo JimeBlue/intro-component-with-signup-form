@@ -169,3 +169,19 @@ body {
 .btn:focus {
   opacity: 0.75;
 }
+
+.form__terms {
+  padding: 20px 0;
+  width: 75%;
+  text-align: center;
+  color: var(--grayish-blue);
+  font-weight: 500;
+  line-height: 1.65;
+  font-size: 0.688rem;
+}
+
+.form__terms a {
+  color: var(--red);
+  text-decoration: none;
+  font-weight: 500;
+}
