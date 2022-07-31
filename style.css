@@ -34,6 +34,12 @@ body {
   font-family: var(--poppins);
 }
 
+/* Utility */
+
+.hide {
+  display: none;
+}
+
 /* Intro section */
 
 .intro {
@@ -110,13 +116,15 @@ body {
 
 .form__item {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  border-radius: 5px;
+  border: 1.5px solid gray;
 }
 
 .form__item input {
-  padding: 15px 5px;
-  border-radius: 5px;
-  border: 1px solid var(--grayish-blue);
+  border: none;
+  flex: 1;
+  padding: 15px;
 }
 
 ::placeholder {
@@ -124,4 +132,20 @@ body {
   font-weight: 500;
   font-family: var(--poppins);
   color: gray;
+}
+
+.icon {
+  padding: 15px;
+}
+
+.form__error-message {
+  margin: 5px 0 10px 0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--red);
+  width: 100%;
+  /* To put the span at the right extreme */
+  display: flex;
+  justify-content: end;
 }
