@@ -29,28 +29,41 @@
             <span> $20/mo. thereafter</span>
           </div>
 
+          <!-- IDEA: put the error message span as another <li></li> -->
           <form action="" class="form">
             <ul class="form__list">
               <li class="form__item">
                 <input type="text" id="first-name" placeholder="First Name" />
+                <img src="/images/icon-error.svg" alt="" />
+              </li>
+              <li>
                 <span class="form__error-message"
                   >First Name cannot be empty</span
                 >
               </li>
               <li class="form__item">
                 <input type="text" id="last-name" placeholder="Last Name" />
+                <img src="/images/icon-error.svg" alt="" />
+              </li>
+              <li>
                 <span class="form__error-message"
                   >Last Name cannot be empty</span
                 >
               </li>
               <li class="form__item">
                 <input type="email" id="email" placeholder="Email Adress" />
+                <img src="/images/icon-error.svg" alt="" />
+              </li>
+              <li>
                 <span class="form__error-message"
                   >Looks like this is not an email</span
                 >
               </li>
               <li class="form__item">
                 <input type="password" id="password" placeholder="Password" />
+                <img src="/images/icon-error.svg" alt="" />
+              </li>
+              <li>
                 <span class="form__error-message"
                   >Password cannot be empty</span
                 >
