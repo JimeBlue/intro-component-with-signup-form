@@ -47,10 +47,20 @@ const setErrorFor = (input, message) => {
   const span = errorMessage.querySelector('span');
   //   Put the error message in the span
   span.innerText = message;
+
+  // TODO: change .form__error-message to .error
   // Add the error class to the parent of the span tag
-  errorMessage.className = 'form__error-message';
-  //   Get the error icon
-  errorIcon = formItem.querySelector('img');
-  // Delete hide class of the icon
-  errorIcon.classList.remove('hide');
+  // errorMessage.className = 'form__error-message';
+
+  //Add the error class to the parent of error img, so that with css code the error img becomes visible
+  formItem.className = 'form__item error';
 };
+
+function setSuccessFor(input) {
+  // Get the parent of the target input, i.e <div class="form__item">
+  const formItem = input.parentElement;
+  const errorMessage = formItem.nextElementSibling;
+  const span = errorMessage.querySelector('span');
+  formItem.className = 'form__item success';
+  span.innerText = '';
+}

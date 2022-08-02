@@ -134,8 +134,22 @@ body {
   color: gray;
 }
 
-.icon {
+/* note: initially the error icon is not display */
+
+.form__item img {
   padding: 15px;
+  visibility: hidden;
+}
+
+/* note: if the parent of the error img includes .error show the imgage*/
+
+.form__item.error img {
+  visibility: visible;
+}
+
+/* note: if the parent of the error img includes .success hide the imgage*/
+.form__item.error img {
+  visibility: hidden;
 }
 
 .form__error-message {
@@ -216,11 +230,3 @@ body {
     justify-content: center;
   }
 }
-
-/* TODO: 
-The icon has an initial display none,
-
-if the class is error,
-  the icon is visible and  if the class is succes the icon is hidden */
-
-/* TODO: change the class form__error-message to sth like error */
