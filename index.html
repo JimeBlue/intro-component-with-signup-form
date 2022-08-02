@@ -31,44 +31,49 @@
           <form action="" class="form" id="form">
             <ul class="form__list">
               <li class="form__item">
-                <input type="text" id="first-name" placeholder="First Name" />
-                <img src="/images/icon-error.svg" alt="error icon" class="" />
-              </li>
-              <li class="form__error-message">
-                <span></span>
+                <input
+                  type="text"
+                  name="first name"
+                  id="first-name"
+                  placeholder="First Name"
+                  class="form__input"
+                />
+                <img src="/images/icon-error.svg" class="error-icon"></img>
+                <small class="form__error-message"></small>
               </li>
               <li class="form__item">
-                <input type="text" id="last-name" placeholder="Last Name" />
-                <img
-                  src="/images/icon-error.svg"
-                  alt="error icon"
-                  class="icon hide"
+                <input
+                  type="text"
+                  name="last name"
+                  id="last-name"
+                  placeholder="Last Name"
+                  class="form__input"
                 />
-              </li>
-              <li class="form__error-message">
-                <span class="hide">Last Name cannot be empty</span>
+                <img src="/images/icon-error.svg" class="error-icon"></img>
+                <small></small>
               </li>
               <li class="form__item">
-                <input type="email" id="email" placeholder="Email Adress" />
-                <img
-                  src="/images/icon-error.svg"
-                  alt="error icon"
-                  class="icon hide"
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  class="form__input"
                 />
-              </li>
-              <li class="form__error-message">
-                <span class="hide">Looks like this is not an email</span>
+                <img src="/images/icon-error.svg" class="error-icon"></img>
+                <small>FLooks like this is not an email</small>
               </li>
               <li class="form__item">
-                <input type="password" id="password" placeholder="Password" />
-                <img
-                  src="/images/icon-error.svg"
-                  alt="error icon"
-                  class="icon hide"
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="password"
+                  autocomplete="on"
+                  class="form__input"
                 />
-              </li>
-              <li class="form__error-message">
-                <span class="hide">Password cannot be empty</span>
+                <img src="/images/icon-error.svg" class="error-icon"></img>
+                <small>Password cannot be empty</small>
               </li>
             </ul>
             <button type="submit" class="btn">Claim your free trial</button>

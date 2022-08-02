@@ -113,55 +113,45 @@ body {
   padding: 0;
 }
 
+/* TODO: finish the styles of the input and the error message */
 .form__item {
-  display: flex;
-  flex-direction: row;
-  border-radius: 5px;
-  border: 1.5px solid gray;
-  margin-bottom: 15px;
-}
-
-.form__item input {
-  border: none;
-  flex: 1;
-  padding: 15px;
-}
-
-::placeholder {
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: var(--poppins);
-  color: gray;
-}
-
-/* note: initially the error icon is not display */
-
-.form__item img {
-  padding: 15px;
-  visibility: hidden;
-}
-
-/* note: if the parent of the error img includes .error show the imgage*/
-
-.form__item.error img {
-  visibility: visible;
-}
-
-/* note: if the parent of the error img includes .success hide the imgage*/
-.form__item.error img {
-  visibility: hidden;
-}
-
-.form__error-message {
-  margin: 5px 0 10px 0;
-  font-size: 0.75rem;
-  font-weight: 500;
-  font-style: italic;
-  color: var(--red);
   width: 100%;
-  /* To place the span at the right extreme */
-  display: flex;
-  justify-content: end;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.form__input {
+  display: inline-block;
+  width: 100%;
+  padding: 15px 0;
+}
+
+/* note: Initially the error icon is invisible */
+.error-icon {
+  position: absolute;
+  top: 10px;
+  right: 7px;
+  display: none;
+}
+
+/* note: if the form item has the class error show the icon */
+.form__item.error .error-icon {
+  display: inline;
+}
+
+/* note: if the form item has the class success hide the icon */
+.form__item.success .error-icon {
+  display: none;
+}
+
+/* note: Initially the error message is invisible */
+.form__error-message {
+  display: none;
+}
+
+/* note: if the form item has the class error show the error message */
+.form__item.error .form__error-message {
+  display: inline-block;
 }
 
 .btn {
