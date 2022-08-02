@@ -27,7 +27,7 @@ const checkInputs = () => {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  // TODO: erase the text in the html in each span with the error message?
+  // TODO: erase the text in the html in each span with the error message
 
   // Validate first name
   if (firstNameValue === '') {
