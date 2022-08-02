@@ -118,6 +118,7 @@ body {
   flex-direction: row;
   border-radius: 5px;
   border: 1.5px solid gray;
+  margin-bottom: 15px;
 }
 
 .form__item input {
@@ -215,3 +216,11 @@ body {
     justify-content: center;
   }
 }
+
+/* TODO: 
+The icon has an initial display none,
+
+if the class is error,
+  the icon is visible and  if the class is succes the icon is hidden */
+
+/* TODO: change the class form__error-message to sth like error */
