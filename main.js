@@ -31,6 +31,8 @@ const checkInputs = () => {
   if (firstNameValue === '') {
     //If the first name input is empty call the setErrorFor function and pass the input to which we want to set the error, in this casae firstName and also pass an error message
     setErrorFor(firstName, 'First Name cannot be empty');
+    //Delete the placeholder
+    firstName.placeholder = '';
   } else {
     // if the first name input is not empty call the setSuccessFor function passing only the firstName input without any message
     setSuccessFor(firstName);
@@ -39,6 +41,8 @@ const checkInputs = () => {
   // Validate last name
   if (lastNameValue === '') {
     setErrorFor(lastName, 'Last Name cannot be empty');
+    //Delete the placeholder
+    lastName.placeholder = '';
   } else {
     setSuccessFor(lastName);
   }
@@ -46,6 +50,9 @@ const checkInputs = () => {
   // Validate email
   if (emailValue === '') {
     setErrorFor(email, 'Email cannot be empty');
+    //To change the placeholder text
+    email.placeholder = 'email@example/com';
+    //Check if email is valid calling the isEmail function
   } else if (!isEmail(emailValue)) {
     setErrorFor(email, 'Looks like this is not a valid email');
   } else {
@@ -56,6 +63,8 @@ const checkInputs = () => {
 
   if (passwordValue === '') {
     setErrorFor(password, 'Password cannot be empty');
+    //Delete the placeholder
+    password.placeholder = '';
   } else {
     setSuccessFor(password);
   }

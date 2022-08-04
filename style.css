@@ -113,17 +113,54 @@ body {
   padding: 0;
 }
 
-/* TODO: finish the styles of the input and the error message */
 .form__item {
   width: 100%;
   margin-bottom: 10px;
   position: relative;
+  /* note: Added this padding so that there is space under the input to correctly place the error message */
+  padding-bottom: 25px;
 }
 
 .form__input {
   display: inline-block;
   width: 100%;
   padding: 15px 0;
+  border: solid 1px var(--grayish-blue);
+}
+
+/* note: If the .form__item includes .error the border of the input is red*/
+.form__item.error .form__input {
+  border: solid 2px var(--red);
+}
+
+/* note: If the .form__item includes .error the border of the input in on :focus and :active is red*/
+.form__item.error .form__input:focus,
+.form__item.error .form__input:active {
+  border: solid 3px var(--red);
+  /* This removes the native outline and it´s accesible*/
+  outline: none;
+}
+
+/*note: If the .form__item includes .error the border of the input is red*/
+.form__item.success .form__input {
+  border: solid 2px var(--green);
+}
+
+/* note: If the .form__item includes .success the border of the input in on :focus and :active is red*/
+.form__item.success .form__input:focus,
+.form__item.success .form__input:active {
+  border: solid 3px var(--green);
+  /* This removes the native outline and it´s accesible*/
+  outline: none;
+}
+.form__input::placeholder {
+  padding-left: 20px;
+  font-family: var(--poppins);
+  font-weight: 500;
+}
+
+.form__item.error .form__input::placeholder {
+  color: var(--red);
 }
 
 /* note: Initially the error icon is invisible */
@@ -147,6 +184,13 @@ body {
 /* note: Initially the error message is invisible */
 .form__error-message {
   display: none;
+  color: var(--red);
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-style: italic;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* note: if the form item has the class error show the error message */
@@ -168,8 +212,7 @@ body {
   letter-spacing: 1px;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
   opacity: 0.75;
 }
 
