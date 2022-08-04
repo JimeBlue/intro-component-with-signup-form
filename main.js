@@ -27,8 +27,6 @@ const checkInputs = () => {
   const emailValue = email.value.trim();
   const passwordValue = password.value.trim();
 
-  // TODO: erase the text in the html in each span with the error message
-
   // Validate first name
   if (firstNameValue === '') {
     //If the first name input is empty call the setErrorFor function and pass the input to which we want to set the error, in this casae firstName and also pass an error message
@@ -43,6 +41,23 @@ const checkInputs = () => {
     setErrorFor(lastName, 'Last Name cannot be empty');
   } else {
     setSuccessFor(lastName);
+  }
+
+  // Validate email
+  if (emailValue === '') {
+    setErrorFor(email, 'Email cannot be empty');
+  } else if (!isEmail(emailValue)) {
+    setErrorFor(email, 'Looks like this is not a valid email');
+  } else {
+    setSuccessFor(email);
+  }
+
+  //Validate password
+
+  if (passwordValue === '') {
+    setErrorFor(password, 'Password cannot be empty');
+  } else {
+    setSuccessFor(password);
   }
 };
 
@@ -59,9 +74,16 @@ const setErrorFor = (input, message) => {
 };
 
 // Create function to show there is no error
-function setSuccessFor(input) {
+const setSuccessFor = (input) => {
   // Get the parent of the target input, i.e .form__item
   const formItem = input.parentElement;
   // Add class sucess to parent of error icon. The class success in the css will hide the icon
   formItem.className = 'form__item success';
-}
+};
+
+//Create a function with regex to check if email is valid
+const isEmail = (email) => {
+  return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
+};
