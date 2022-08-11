@@ -28,8 +28,7 @@
             <span><b>Try it free 7 days</b> then</span>
             <span> $20/mo. thereafter</span>
           </div>
-          <!-- note: add  noValidate attribute to the form to prevent html validation-->
-          <form action="" class="form" id="form" noValidate>
+          <form action="" class="form" id="form" novalidate>
             <ul class="form__list">
               <li class="form__item">
                 <input
@@ -39,7 +38,6 @@
                   placeholder="First Name"
                   class="form__input"
                 />
-                <img src="/images/icon-error.svg" class="error-icon"></img>
                 <small class="form__error-message"></small>
               </li>
               <li class="form__item">
@@ -50,7 +48,6 @@
                   placeholder="Last Name"
                   class="form__input"
                 />
-                <img src="/images/icon-error.svg" class="error-icon"></img>
                 <small class="form__error-message"></small>
               </li>
               <li class="form__item">
@@ -61,7 +58,6 @@
                   placeholder="Email Address"
                   class="form__input"
                 />
-                <img src="/images/icon-error.svg" class="error-icon"></img>
                 <small class="form__error-message"></small>
               </li>
               <li class="form__item">
@@ -73,11 +69,12 @@
                   autocomplete="on"
                   class="form__input"
                 />
-                <img src="/images/icon-error.svg" class="error-icon"></img>
-                <small class="form__error-message">Password cannot be empty</small>
+                <small class="form__error-message"
+                  >Password cannot be empty</small
+                >
               </li>
             </ul>
-            <button type="submit" class="btn" >Claim your free trial</button>
+            <button type="submit" class="btn">Claim your free trial</button>
             <small class="form__terms"
               >By clicking the button, you are agreeing to our
               <a href="#">Terms and Services</a></small
